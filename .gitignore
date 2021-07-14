@@ -1,0 +1,29 @@
+# Python
+*.pyc
+*~
+__pycache__
+*.log
+*.pot
+local_settings.py 
+
+# Env
+.env
+myvenv/
+venv/
+
+# Dossier "static" à la racine du projet
+/static/
+
+# Windows
+Thumbs.db*
+ehthumbs*.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+
+# Visual Studio
+.vscode/
+.history/
+*.code-workspace
+
+Text
+XPath: /pre[2]/code
