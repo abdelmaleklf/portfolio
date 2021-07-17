@@ -15,7 +15,7 @@ class Social(models.Model):
     linkedin = models.URLField(blank=False, max_length=200)
 
 
-class Testimonials(models.Model):
+class Testimonial(models.Model):
     name = models.CharField(blank=False, max_length=50)
     comment = models.TextField(blank=False)
 
