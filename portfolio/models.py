@@ -33,6 +33,15 @@ class Project(models.Model):
         return self.name
 
 
+class Skill(models.Model):
+    name = models.CharField(blank=False, max_length=50)
+    percentage = models.IntegerField()
+
+    def __str__(self):
+        return self.name
+
+
+
 
 
 
