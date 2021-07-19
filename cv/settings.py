@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 import environ
+import os
 env = environ.Env(
     # set casting, default value
     DEBUG=(bool, False)
@@ -122,7 +123,18 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
+
+MEDIA_URL = '/img/'
+
+STATICFILES_DIRS = [
+    (os.path.join(BASE_DIR, 'static'))
+]
+
+TEMPLATE_DIRS = (os.path.join(BASE_DIR, 'portfolio/templates'),)
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static/img')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
