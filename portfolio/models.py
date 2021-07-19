@@ -16,6 +16,7 @@ class Social(models.Model):
 
 
 class Testimonial(models.Model):
+    image = models.ImageField(upload_to='static/img/')
     name = models.CharField(blank=False, max_length=50)
     comment = models.TextField(blank=False)
 
@@ -26,10 +27,13 @@ class Testimonial(models.Model):
 class Project(models.Model):
     name = models.CharField(blank=False, max_length=50)
     url = models.URLField(blank=True, max_length=200)
-    image = models.ImageField(upload_to='static/images/')
+    image = models.ImageField(upload_to='static/img/')
 
     def __str__(self):
         return self.name
+
+
+
 
 
 
