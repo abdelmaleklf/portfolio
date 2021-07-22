@@ -8,7 +8,7 @@ def home(request):
     projects = Project.objects.all()
     socials = Social.objects.all()
     testimonials = Testimonial.objects.all()
-    skills = Skill.objects.all()
+    skills = Skill.objects.all().order_by('-percentage')
     context = {'infos': infos, 'projects': projects, 'socials': socials, 'testimonials': testimonials, 'skills': skills}
     return render(request, 'portfolio/index.html', context)
 
